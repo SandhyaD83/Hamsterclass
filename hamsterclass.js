@@ -40,7 +40,7 @@ animal.getPrice();
 
 /*2.Person
 attributes:
- 
+
 name - set name from parameter in constructor method
 age - initially 0
 height - initially 0
@@ -49,7 +49,7 @@ mood - integer starting at 0 initially
 hamsters - empty array initially
 bankAccount - initially set to 0
 methods:
- 
+
 getName() - returns name
 getAge() - returns age
 getWeight() - returns weight
@@ -72,14 +72,14 @@ class Person {
   getName() {
     return this.name;
   }
-  getAge(age) {
+  getAge() {
     return this.age;
   }
   getWeight() {
     return this.weight;
   }
   greet() {
-    console.log("hello" + "" + this.name);
+    console.log("hello" + " " + this.name);
   }
   eat() {
     this.weight += 1;
@@ -97,19 +97,21 @@ class Person {
 
   }
   buyHamster(hamster) {
-    this.hamster.push(hamster);
+    this.hamsters.push(hamster);
     this.mood += 10;
     this.bankAccount -= animal.getPrice();
 
   }
 }
-
-console.log(newPerson);
-newPerson.greet();
-newPerson.buyHamstaer("Fluffy");
+const person1 = new Person("John");
+console.log(person1);
+person1.getAge();
+person1.getWeight();
+person1.greet();
+person1.buyHamster("Fluffy");
 /* 3.Create a Story with your Person class
 Feel free to update or add methods to automate some of these tasks.
- 
+
 Instantiate a new Person named Timmy
 Age Timmy five years
 At this point Timmy's a little bummed. As a precocious child, he feels he's "seen it all" already. Have him eat five times.
@@ -121,22 +123,22 @@ Have Timmy "buy" Gus
 Age Timmy 15 years
 Have Timmy eat twice
 Have Timmy exercise twice*/
-const newPerson = new Person("Timmy");
-newPerson.getAge(5)
-newPerson.eat();
-newPerson.eat();
-newPerson.eat();
-newPerson.eat();
-newPerson.eat();
-newPerson.exercise();
-newPerson.exercise();
-newPerson.exercise();
-newPerson.exercise();
-newPerson.exercise();
-newPerson.getAge(9)
-newPerson.buyHamster("Gus")
-newPerson.getAge(15)
-newPerson.eat();
-newPerson.eat();
-newPerson.exercise();
-newPerson.exercise();
+const person2 = new Person("Timmy");
+person2.getAge(5)
+person2.eat();
+person2.eat();
+person2.eat();
+person2.eat();
+person2.eat();
+person2.exercise();
+person2.exercise();
+person2.exercise();
+person2.exercise();
+person2.exercise();
+person2.getAge(9)
+person2.buyHamster("Gus")
+person2.getAge(15)
+person2.eat();
+person2.eat();
+person2.exercise();
+person2.exercise();
